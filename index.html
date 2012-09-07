@@ -1,0 +1,473 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Guia Tranportes Interprovinciales</title>
+
+<link href="jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="maps6.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+<style type="text/css">
+.ui-page {
+	background-attachment: fixed;
+	background-image: url(images/Wall3x.jpg);
+	background-position: center center;
+}
+
+.ui-text {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	color: #999999;
+}
+
+</style>
+
+<style>
+		#map-page { width: 100%; height: 100%; padding: 50; } 
+		#map-canvas {
+	width: 100%;
+	height: 90%;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 2px;
+	margin-left: 5px;
+}
+</style>
+
+</head>
+
+<body>
+									<!----- PAGINA 1 ------>
+
+				<!----- Page Central ------>
+
+<div data-role="page" data-theme="a" id="home">
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <em><span class="ui-text">GUIA TRANSPORTE</span></em></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:center"><div class="ui-block-c"> <a href="#home" data-transition="fade"> <img src="images/home.png"> </a></div> 
+  </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+  <div class="ui-block-e"> <a href="#formulario1" data-transition="fade"> <img src="images/registrar.png"> </a></div> 
+</div>
+
+</div>
+</div>
+
+<div data-role="content">
+
+				<!-- cracion de TABLAS HOME ----->
+
+<br> 
+<div class="ui-grid-a" align="center">
+            
+  <div class="ui-block-a"> <a href="#map-page" data-transition="slidedown"> <img src="images/Geo.png"> </a></div>
+  
+  <div class="ui-block-b"> <a href="login.html" data-transition="fade"> <img src="images/Reservaciones.png"> </a></div>    
+
+
+<br> <br> <br> <br> <br>
+<br> <br>  <br> <br> <br>
+      
+ 
+  <div class="ui-block-a"> <a href="busqueda.html" data-transition="slidedown">  <img src="images/Guia.png"> </a></div>
+  
+  <div class="ui-block-b"> <a href="#contacto" data-transition="fade"> <img src="images/Contactenos.png"> </a></div>    
+         
+ </div>
+ </div>   
+
+<div data-role="footer" data-theme="a" data-id="pie1" data-position="fixed">
+<h1> jorgeluix.wordpress.com </h1>
+</div>
+</div>
+
+
+										<!--- CONTACTO ------>
+
+
+<div data-role="page" data-theme="a" id="contacto">
+
+	<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <em><span class="ui-text">GUIA TRANSPORTE</span></em></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:right">
+  <div class="ui-block-c"> <a href="#home" data-transition="fade"> <img src="images/home.png"> </a></div> </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+   <div class="ui-block-e"> <a href="#formulario1" data-transition="fade"> <img src="images/registrar.png"> </a></div> 
+</div>
+
+</div>
+</div>
+    
+		<!-- creacion de columnas ----->
+        
+		<div data-role="content">
+        <div style="text-align:center">
+<img src="images/Contactox.jpg" width="305" align="baseline" data-inset="true"></div>
+			<h2 align="center"> Contactenos  </h2>
+            
+      	<ul data-role="listview" data-dividertheme="e" data-inset="true">
+               
+            <li data-theme="b"> OPCIONES </li>
+            
+            <li> <a href="#telf"> Telefono </a>
+            	 <a href="#telf1"> Precio </a> </li>
+            <li> <a href="#dir"> Direccion</a>
+            	 <a href="#dir1"> Precio </a>  </li>  
+            <li> <a href="#email"> e-mail</a>
+            	 <a href="#email1"> Precio </a>  </li>    
+        </ul>
+		</div>
+        
+<div data-role="footer" data-position="fixed" data-theme="a" data-id="pie1">
+<h1> jorgeluix.wordpress.com </h1>
+</div>
+</div>
+
+
+				<!----- GOOGLE MAPS ------>
+
+<div data-role="page"  id="map-page"  data-add-back-btn="true">
+    	<div data-role="header" data-theme="a">
+        	<h1>Geolocalización</h1>
+            
+        </div>
+        <div data-role="content" id="map-canvas">
+           <h3 align="center" >Conectando</h3>
+          
+                           
+        </div>
+        
+        <div data-role="footer" data-position="fixed" data-id="pie1" data-theme="a">
+        	<h4>jorgeluix.wordpress.com/</h4>
+        </div>
+    </div>
+
+
+
+
+
+
+					<!----- CONTACTENOS 1a ------>
+
+	<div data-role="page" data-theme="a" id="telf">
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <span class="ui-text"><em>GUIA TRANSPORTE</em></span></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:right">
+  <div class="ui-block-c"> <a href="#home" data-transition="fade"> <img src="images/home.png"> </a></div> </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+   <div class="ui-block-e"> <a href="#formulario1" data-transition="fade"> <img src="images/registrar.png"> </a></div> 
+</div>
+
+</div>
+</div>
+    
+		<!-- creacion de columnas ----->
+        
+<div data-role="content">
+			<h2 align="center"> Telefonos </h2>
+            
+   <p align="center"> (593)(4)-2130166 - 2130167 </p>
+   <p align="center">	(593)(4)-2332239 </p>
+        
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a" data-id="pie1">
+<h1> jorgeluix.wordpress.com </h1>
+</div>
+</div>
+
+
+						<!----- CONTACTENOS 1b ------>
+
+	<div data-role="page" data-theme="a" id="dir">
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <span class="ui-text">GUIA TRANSPORTE</span></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:right">
+  <div class="ui-block-c"> <a href="#home" data-transition="fade"> <img src="images/home.png"> </a></div> </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+  <div class="ui-block-e"> <a href="#formulario1" data-transition="fade"> <img src="images/registrar.png"> </a></div> 
+</div>
+
+</div>
+</div>
+    
+		<!-- creacion de columnas ----->
+        
+<div data-role="content">
+	<h2 align="center"> Telefonos </h2>
+            
+   <p align="center"> (Av. Benjamín Rosales A.   </p>
+   <p align="center">	y Av. de las Américas s/n) </p>
+        
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a" data-id="pie1">
+<h1> jorgeluix.wordpress.com </h1>
+</div>
+</div>
+
+
+								<!----- CONTACTENOS 1c ------>
+
+	<div data-role="page" data-theme="a" id="email">
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <span class="ui-text">GUIA TRANSPORTE</span></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:right">
+  <div class="ui-block-c"> <a href="#home" data-transition="fade"> <img src="images/home.png"> </a></div> </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+  <div class="ui-block-e"> <a href="#formulario1" data-transition="fade"> <img src="images/registrar.png"> </a></div>  
+</div>
+
+</div>
+</div>
+    
+		<!-- creacion de columnas ----->
+        
+<div data-role="content">
+	<h2 align="center"> E-mail</h2>
+            
+   <p align="center"> pcgeoge@hotmail.com  </p>
+   <p align="center">	jorgeluisvz@gmail.com </p>
+           
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a" data-id="pie1">
+<h1> jorgeluix.wordpress.com </h1>
+</div>
+</div>
+
+
+
+
+						<!----- FORMULARIO 1 ----->
+
+<div data-role="page" data-theme="a" id="formulario1">
+
+	<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <span class="ui-text">GUIA TRANSPORTE</span></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:center">
+  <div class="ui-block-c"> <a href="#home" data-transition="fade"> <img src="images/home.png"> </a></div> </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="Busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+  <div class="ui-block-e"> <a href="formulario.html" data-transition="fade"> <img src="images/registrar.png"> </a></div> 
+</div>
+
+</div>
+</div>
+    
+		<!-- cracion de columnas ----->
+        
+		<div data-role="content">
+		  <div data-role="fieldcontain">
+		    <label for="textinput">Nombres:</label>
+		    <input type="text" name="textinput" id="textinput"   
+            required placeholder="Ingrese su nombre completo" data-mini="true">
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="textinput2">Usuario:</label>
+		    <input type="text" name="textinput2" id="textinput2"
+            required placeholder="Ingrese usuario" data-mini="true">
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="textinput3">Email:</label>
+		    <input type="text" name="textinput3" id="textinput3" data-mini="true">
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="passwordinput">Contraseña:</label>
+		    <input type="password" name="passwordinput" id="passwordinput"
+            required placeholder="Ingrese Contraseña" data-mini="true">
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="passwordinput2">Confirmar Contraseña:</label>
+		    <input type="password" name="passwordinput2" id="passwordinput2" 
+            required placeholder="Vuelva a ingresar la Contraseña" data-mini="true">
+	      </div>
+          
+		  <div data-role="controlgroup" data-type="horizontal">
+          <div align="right"> <br>
+        <a href="#formulario2" data-role="button" data-icon="arrow-r" data-mini="true" data-transition="slide">Siguiente</a> </div>
+          
+      </div> </div>
+      
+<div data-role="footer" data-position="fixed" data-id="pie1">
+<h3> wwww.georgexluix.com </h3>
+</div>
+</div>
+
+
+								<!----- FORMULARIO 2 ----->
+
+
+<div data-role="page" data-theme="a" id="formulario2">
+   
+
+	<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="ui-grid-d">
+            
+  <div class="ui-block-a"> <span class="ui-text">GUIA TRANSPORTE</span></div>
+  
+  <div class="ui-block-b"> </div>  
+  <div style="text-align:center">
+  <div class="ui-block-c"> <a href="index.html" data-transition="fade"> <img src="images/home.png"> </a></div> </div>
+  
+  <div style="text-align:right">
+  <div class="ui-block-d"> <a href="Busqueda.html" data-transition="fade"> <img src="images/buscaup.png"> </a></div> 
+  
+  <div class="ui-block-e"> <a href="Formulario.html" data-transition="fade"> <img src="images/registrar.png"> </a></div> 
+</div>
+
+</div>
+</div>
+    
+		<!-- cracion de columnas ----->
+        
+		<div data-role="content">
+		  <div data-role="fieldcontain">
+		    <label for="textinput4">Nombre y Apellido:</label>
+		    <input type="text" name="textinput4" id="textinput4"
+            required placeholder="Deben Coincidir con la tarjeta" >
+	      </div>
+
+         <div data-role="fieldcontain">
+		    <label for="textinput5">Numero de tarjeta:</label>
+		    <input type="text" name="textinput5" id="textinput5"
+            required placeholder="Solo Visa, MasterCard y A. Express" >
+	      </div>
+         
+         <div data-role="fieldcontain">
+		    <label for="textinput6">CCV / CCV2:</label>
+		    <input type="text" name="textinput6" id="textinput6"
+            required placeholder="Código de Seguridad" >
+	      </div>
+
+         
+         <div data-role="fieldcontain">
+	<fieldset data-role="controlgroup" data-type="horizontal">
+
+		<legend>Vence:</legend>
+		
+		<label for="select-mes">Month</label>
+		<select name="select-mes" id="select-mes">
+			<option>Mes</option>
+			<option value="ene">Enero (1)</option>
+			<option value="feb">Febrero (2)</option>
+			<option value="mar">Marzo (3)</option>
+			<option value="abr">Abril (4)</option>
+			<option value="may">Mayo (5)</option>
+			<option value="jun">Junio (6)</option>
+			<option value="jul">Julio (7)</option>
+			<option value="ago">Agosto (8)</option>
+			<option value="sep">Septiembre (9)</option>
+			<option value="oct">Octubre (10)</option>
+			<option value="nov">Noviembre (11)</option>
+			<option value="dic">Diciembre (12)</option>
+		</select>
+
+<label for="select-ano">Year</label>
+		<select name="select-ano" id="select-ano">
+			<option>Año</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+		</select>
+	</fieldset>
+		</div>
+         
+		<div data-role="controlgroup" data-type="horizontal">
+        <div align="right"> <br>
+        <a href="#formulario3" data-role="button" data-icon="arrow-r" data-rel="dialog" data-mini="true" data-transition="pop">Acepto</a> </div>
+        </div>
+        </div>
+      
+<div data-role="footer" data-position="fixed" data-id="pie1">
+<h3> wwww.georgexluix.com </h3>
+</div>
+</div>
+
+
+								<!----- FORMULARIO 3 ----->
+
+
+		<div data-role="page" id="formulario3">
+               
+        	<div data-role="header" data-position="fixed" data-theme="a">
+				<h2 align="center"> R. Completado </h2>
+			</div>
+        
+        <div data-role="content" data-theme="c">
+      	<h3 align="center"> Usuario Registrado </h3>
+		<a href="index.html" data-role="button"  data-direction="reverse"> 	Volver al Inicio </a>
+                
+        </div>
+        
+        <div data-role="footer" data-theme="a">
+        <h4> wwww.georgexluix.com </h4>
+        </div>      
+        </div>
+
+
+</body>
+</html>
